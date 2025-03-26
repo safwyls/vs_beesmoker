@@ -1,0 +1,471 @@
+{
+  "code": "beesmoker",
+  "class": "beesmoker.blockbeesmoker",
+  "entityClass": "beesmoker.blockentitybeesmoker",
+  "creativeinventory": {
+    "general": [
+      "*-east"
+    ],
+    "flora": [
+      "*-east"
+    ],
+    "decorative": [
+      "*-east"
+    ],
+    "better-beekeeping": [
+      "*-east"
+    ]
+  },
+  "variantgroups": [
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "storageFlags": 257,
+  "drawtype": "JSON",
+  "resistance": 0,
+  "materialdensity": "3000",
+  "blockmaterial": "Metal",
+  "renderpass": "transparent",
+  "lightAbsorption": 0,
+  "doNotRenderAtLod2": true,
+  "maxStackSize": 1,
+  "attackPower": 1,
+  "attackRange": 0.5,
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "requiresBlockEntity": true,
+  "attributes": {
+    "inventoryClassName": "chest",
+    "defaultType": "normal",
+    "types": [ "normal" ],
+    "drop": {
+      "normal": true
+    },
+    "quantitySlots": {
+      "normal": 1
+    },
+    "dialogTitleLangCode": {
+      "normal": "beesmokercontents"
+    },
+    "storageType": {
+      "normal": 189
+    },
+    "groundStorageTransform": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.65
+    }
+  },
+  "behaviors": [
+    {
+      "name": "HorizontalOrientable",
+      "properties": {
+        "dropBlockFace": "east"
+      }
+    }
+  ],
+  "sounds": {
+    "place": "game:block/plate",
+    "hit": "game:block/plate",
+    "break": "game:block/plate"
+  },
+  "textures": {
+    "charcoal": {
+      "base": "game:block/coal/charcoal"
+    },
+    "iron-fence-base": {
+      "base": "game:block/metal/fence/iron-fence-base"
+    },
+    "stainlesssteel": {
+      "base": "game:block/metal/plate/stainlesssteel"
+    },
+    "steel2": {
+      "base": "game:block/metal/plate/steel"
+    },
+    "pelt": {
+      "base": "game:item/resource/hide/pelt"
+    }
+  },
+  "shapebytype": {
+    "*-north": {
+      "base": "block/beesmoker",
+      "rotateY": 0
+    },
+    "*-east": {
+      "base": "block/beesmoker",
+      "rotateY": 270
+    },
+    "*-south": {
+      "base": "block/beesmoker",
+      "rotateY": 180
+    },
+    "*-west": {
+      "base": "block/beesmoker",
+      "rotateY": 90
+    }
+  },
+  "particlePropertiesByType": {
+    "*-north": [
+      {
+        "__comment": "Smoke quads",
+        "hsvaColor": [
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 200,
+            "var": 30
+          },
+          {
+            "avg": 220,
+            "var": 50
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 0,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": 0,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": -0.3,
+            "var": 0.1
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.025
+          },
+          {
+            "avg": 0.15,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0.025
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "size": {
+          "avg": 0.25,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.5
+        },
+        "particleModel": "Quad",
+        "windAffectednes": 0.7
+      }
+    ],
+    "*-east": [
+      {
+        "__comment": "Smoke quads",
+        "hsvaColor": [
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 200,
+            "var": 30
+          },
+          {
+            "avg": 220,
+            "var": 50
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 0,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": 0.3,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0.1
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.025
+          },
+          {
+            "avg": 0.15,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0.025
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "size": {
+          "avg": 0.25,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.5
+        },
+        "particleModel": "Quad",
+        "windAffectednes": 0.7
+      }
+    ],
+    "*-south": [
+      {
+        "__comment": "Smoke quads",
+        "hsvaColor": [
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 200,
+            "var": 30
+          },
+          {
+            "avg": 220,
+            "var": 50
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 0,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": 0,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0.3,
+            "var": 0.1
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.025
+          },
+          {
+            "avg": 0.15,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0.025
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "size": {
+          "avg": 0.25,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.5
+        },
+        "particleModel": "Quad",
+        "windAffectednes": 0.7
+      }
+    ],
+    "*-west": [
+      {
+        "__comment": "Smoke quads",
+        "hsvaColor": [
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 200,
+            "var": 30
+          },
+          {
+            "avg": 220,
+            "var": 50
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 0,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": -0.3,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0.1
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.025
+          },
+          {
+            "avg": 0.15,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0.025
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "size": {
+          "avg": 0.25,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.5
+        },
+        "particleModel": "Quad",
+        "windAffectednes": 0.7
+      }
+    ]
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.9,
+      "y": -0.2,
+      "z": -1
+    },
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": -80
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "scale": 0.5
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -20,
+      "y": -20,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.35,
+      "z": 0.5
+    },
+    "scale": 1.65
+  },
+  "collisionSelectionBoxesByType": {
+    "*-north": [
+      {
+        "x1": 0.3,
+        "x2": 0.7,
+        "y1": 0,
+        "y2": 0.7,
+        "z1": 0.075,
+        "z2": 0.925
+      }
+    ],
+    "*-east": [
+      {
+        "x1": 0.075,
+        "x2": 0.925,
+        "y1": 0,
+        "y2": 0.7,
+        "z1": 0.7,
+        "z2": 0.3
+      }
+    ],
+    "*-south": [
+      {
+        "x1": 0.3,
+        "x2": 0.7,
+        "y1": 0,
+        "y2": 0.7,
+        "z1": 0.075,
+        "z2": 0.925
+      }
+    ],
+    "*-west": [
+      {
+        "x1": 0.075,
+        "x2": 0.925,
+        "y1": 0,
+        "y2": 0.7,
+        "z1": 0.7,
+        "z2": 0.3
+      }
+    ]
+  }
+}

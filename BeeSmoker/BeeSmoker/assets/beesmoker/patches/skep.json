@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/class",
+    "value": "beesmoker.skepsmokeraware",
+    "file":  "game:blocktypes/wax/skep.json"
+  }
+]

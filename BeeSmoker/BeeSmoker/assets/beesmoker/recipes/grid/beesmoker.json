@@ -1,0 +1,27 @@
+[
+    {
+        "ingredientPattern": "LFM,_M_",
+        "width": 3,
+        "height": 2,
+        "recipeGroup": 1,
+        "ingredients": {
+            "F": {
+                "type": "item",
+                "code": "game:flaxfibers",
+                "quantity": "4"
+            },
+            "L": {
+                "type": "item",
+                "code": "game:leather-*"
+            },
+            "M": {
+                "type": "item",
+                "code": "game:metalplate-*"
+            }
+        },
+        "output": {
+            "type": "block",
+            "code": "blockbeesmoker-east"
+        }
+    }
+]
